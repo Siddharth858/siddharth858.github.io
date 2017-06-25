@@ -1,0 +1,13 @@
+{
+  "name": "siddharth858.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siddharth858/siddharth858.github.io.git"
+  },
+  "author": "Siddharth Kumar",
+  "license": "MIT",
+  "homepage": "https://github.com/siddharth858/siddharth858.github.io.git"
+}
