@@ -1,0 +1,267 @@
+<html>
+ <body>
+  <h1 id="report-on-syringe-pump">
+   Report On Syringe Pump
+  </h1>
+  <p>
+   <br/>
+  </p>
+  <div class="toc">
+   <ul>
+    <li>
+     <a href="#report-on-syringe-pump">
+      Report On Syringe Pump
+     </a>
+     <ul>
+      <li>
+       <a href="#aim">
+        Aim
+       </a>
+      </li>
+      <li>
+       <a href="#materials-used">
+        Materials used:
+       </a>
+       <ul>
+        <li>
+         <a href="#brief-description-of-stepper-motor">
+          Brief Description of Stepper motor
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#important-stores">
+        Important Stores
+       </a>
+      </li>
+      <li>
+       <a href="#usage-procedure">
+        Usage Procedure
+       </a>
+      </li>
+      <li>
+       <a href="#problems-faced">
+        Problems Faced
+       </a>
+      </li>
+      <li>
+       <a href="#warning">
+        Warning
+       </a>
+      </li>
+      <li>
+       <a href="#improvements-to-be-done">
+        Improvements to be done
+       </a>
+      </li>
+      <li>
+       <a href="#media-files-and-code">
+        Media files and code
+       </a>
+      </li>
+      <li>
+       <a href="#references">
+        References
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2 id="aim">
+   Aim
+  </h2>
+  <p>
+   To create a low cost syringe pump using a stepper motor and a microcontroller (arduino in our case). This will be used to gradually administer small amounts of fluid.
+   <br/>
+   <br/>
+  </p>
+  <h2 id="materials-used">
+   Materials used:
+  </h2>
+  <ol>
+   <li>
+    Aluminium channel (12 inch)
+   </li>
+   <li>
+    3D printed parts including coupler, plunger holder and other parts
+   </li>
+   <li>
+    Stepper motor (NEMA 23 bipolar stepper)
+   </li>
+   <li>
+    Arduino Uno
+   </li>
+   <li>
+    Motor driver (TB6600)
+   </li>
+   <li>
+    Lead screw
+   </li>
+   <li>
+    20ml Syringe
+   </li>
+  </ol>
+  <h3 id="brief-description-of-stepper-motor">
+   Brief Description of Stepper motor
+  </h3>
+  <p>
+   <em>
+    This NEMA 23-size hybrid bipolar stepping motor has a 1.8° step angle (200 steps/revolution). Overall it takes 12V DC supply and 2A current. Motor can hold torque of 13 kg-cm (180 oz-in). The motor has four color-coded wires terminated with bare leads: black and green connect to one coil; red and blue connect to the other. It can be controlled by a pair of suitable H-bridges.
+   </em>
+   <br/>
+   <br/>
+  </p>
+  <p>
+   <img alt="Motor" src="https://siddharth858.github.io/0J2296.250.gif"/>
+  </p>
+  <h2 id="important-stores">
+   Important Stores
+  </h2>
+  <ol>
+   <li>
+    <a href="https://goo.gl/maps/SSinhqdLPDu">
+     Roland electronics
+    </a>
+    , Koti, Hyderabad.
+   </li>
+   <li>
+    <a href="https://www.thingbits.net/">
+     ThinkBit
+    </a>
+    and
+    <a href="https://www.banggood.com/">
+     Banggood
+    </a>
+    for online store for Robotics part.
+   </li>
+   <li>
+    <a href="https://goo.gl/maps/dZQ2W6RU8iq">
+     3D Printing Lab
+    </a>
+    .
+   </li>
+  </ol>
+  <h2 id="usage-procedure">
+   Usage Procedure
+  </h2>
+  <p>
+   <em>
+    The required flow rate has to be controlled by changing the delay present in the arduino code. The exact mapping between flow rate and delay (which corresponds to number of steps per second ) hasn’t been determined yet. The plunger holder has to be driven back enough so that the syringe is in it’s maximum length state. This has to be done by driving the motor in a clockwise direction. After fitting the syringe, upload the code to arduino and turn on the power supply.
+   </em>
+  </p>
+  <h2 id="problems-faced">
+   Problems Faced
+  </h2>
+  <ol>
+   <li>
+    <p>
+     <em>
+      There was an issue in printing the hub nut through which the lead screw would pass (which converts the rotational motion of the lead screw into translation of the plunger). The pitch of the screw could not be exactly matched with the standard lead screw pitch. So, we couldn’t use it further.   Though, this problem has been resolved.
+     </em>
+    </p>
+   </li>
+   <li>
+    <p>
+     <em>
+      Another issue which is still a problem is that the plunger holder which drives it, has wobbling when lead screw rotates fast. This could have been reduced to a great extent by inserting two rods end-to-end (passing through the plunger holder) which would stop it from wobbling. We bought two 4mm SS rods. But this could not be placed due to mechanical constraint in the model.
+     </em>
+    </p>
+   </li>
+  </ol>
+  <h2 id="warning">
+   Warning
+  </h2>
+  <ul>
+   <li>
+    <em>
+     Don’t drive the plunger holder beyond a certain limit as it will collide with the coupling if it moves back too much.
+    </em>
+   </li>
+  </ul>
+  <h2 id="improvements-to-be-done">
+   Improvements to be done
+  </h2>
+  <ol>
+   <li>
+    <p>
+     <em>
+      Replacing the existing lead screw with a more precise one to reduce wobbling effects.
+     </em>
+    </p>
+   </li>
+   <li>
+    <p>
+     <em>
+      Making a shield for arduino board and power supply so that the wiring is not messy.
+     </em>
+    </p>
+   </li>
+   <li>
+    <p>
+     <em>
+      Making serial communication from a terminal possible so that commands can be sent by the user. We are planning to do this using CoolTerm more can be found
+      <a href="http://freeware.the-meiers.org/">
+       here
+      </a>
+      .
+     </em>
+    </p>
+   </li>
+   <li>
+    <p>
+     <em>
+      Building a step down transformer and rectifier circuit to supply power to arduino from the main power supply itself.
+     </em>
+    </p>
+   </li>
+  </ol>
+  <h2 id="media-files-and-code">
+   Media files and code
+  </h2>
+  <ul>
+   <li>
+    <a href="https://bit.ly/video_syringpump">
+     Video on YouTube
+    </a>
+   </li>
+   <li>
+    <a href="https://www.dropbox.com/sh/j7mu8six3s0auns/AACSdV0uJhi2t4NM0tpIbWuDa?dl=0">
+     Images
+    </a>
+   </li>
+   <li>
+    <a href="https://bit.ly/syringe_pump_idp">
+     Codes and other material
+    </a>
+   </li>
+  </ul>
+  <h2 id="references">
+   References
+  </h2>
+  <ol>
+   <li>
+    Open-Source Syringe Pump at
+    <a href="http://cavarnon.com/syringepump">
+    </a>
+    <a href="http://cavarnon.com">
+     cavarnon.com
+    </a>
+   </li>
+   <li>
+    <a href="https://www.pololu.com/category/140/nema-23-stepper-motors">
+     Pololu
+    </a>
+    for Motor related information.
+   </li>
+   <li>
+    Soft Copy of above document can be found
+    <a href="https://siddharth858.github.io/syringepump.html">
+     here
+    </a>
+   </li>
+  </ol>
+  <hr/>
+ </body>
+</html>
